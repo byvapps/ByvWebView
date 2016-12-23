@@ -9,12 +9,11 @@
 import UIKit
 
 public class ByvWebViewController: UIViewController, UIWebViewDelegate {
-    var webView: UIWebView = UIWebView()
-    private var firstTime:Bool = true
-    public var displayTitle:String? = nil
     
+    public var displayTitle:String? = nil
     public var urlStr:String? = nil
     
+    var webView: UIWebView = UIWebView()
 
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -38,9 +37,7 @@ public class ByvWebViewController: UIViewController, UIWebViewDelegate {
             views: views)
         allConstraints += horizontalConstraints
         
-        self.view.addConstraints(allConstraints)
-        
-//        NSLayoutConstraint.activate(allConstraints)
+        NSLayoutConstraint.activate(allConstraints)
         
         
         webView.delegate = self
@@ -55,10 +52,15 @@ public class ByvWebViewController: UIViewController, UIWebViewDelegate {
     }
     
     public func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        if firstTime || navigationType != .linkClicked {
+        let url = URL(string: urlStr!)
+        if navigationType != .linkClicked {
             return true
         }
-        if request.url?.host == URL(string: urlStr!)?.host {
+        if url?.host == request.url?.host && url?.path == request.url?.path {
+            return true
+        }
+        
+        if request.url?.host == url?.host {
             let vc:ByvWebViewController = ByvWebViewController()
             vc.urlStr = request.url!.absoluteString;
             self.navigationController?.pushViewController(vc, animated: true)
@@ -69,7 +71,6 @@ public class ByvWebViewController: UIViewController, UIWebViewDelegate {
     }
     
     public func webViewDidFinishLoad(_ webView: UIWebView) {
-        firstTime = false
         if displayTitle == nil {
             self.navigationItem.title = webView.stringByEvaluatingJavaScript(from: "document.title")
         }

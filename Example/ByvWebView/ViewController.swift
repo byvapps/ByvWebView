@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         let vc = ByvWebViewController()
-        vc.urlStr = "http://escueladeltrueque.com/about-app"
+        vc.urlStr = "http://worktel.com/about.html"
         vc.displayTitle = "About"
         
         let nav = UINavigationController(rootViewController: vc)
