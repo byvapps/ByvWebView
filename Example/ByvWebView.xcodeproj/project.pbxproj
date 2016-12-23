@@ -29,7 +29,7 @@
 
 /* Begin PBXFileReference section */
 		3F0CAADA98414987C56E3F7E /* Pods-ByvWebView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ByvWebView_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ByvWebView_Example/Pods-ByvWebView_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		433A905B9A6976B4F057AEE5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		433A905B9A6976B4F057AEE5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ByvWebView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ByvWebView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,8 +43,8 @@
 		631C6559CC94284E84233630 /* Pods-ByvWebView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ByvWebView_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ByvWebView_Tests/Pods-ByvWebView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		7EADF64E9B46F59DBDCDA321 /* Pods_ByvWebView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ByvWebView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D5A16E14E2980072D00B4F /* Pods-ByvWebView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ByvWebView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ByvWebView_Example/Pods-ByvWebView_Example.release.xcconfig"; sourceTree = "<group>"; };
-		9ED16CA305804AF35C52CB5E /* ByvWebView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ByvWebView.podspec; path = ../ByvWebView.podspec; sourceTree = "<group>"; };
-		A453719F73DB32A907643FCC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		9ED16CA305804AF35C52CB5E /* ByvWebView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ByvWebView.podspec; path = ../ByvWebView.podspec; sourceTree = "<group>"; };
+		A453719F73DB32A907643FCC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		B6D9CCB6ED991C20D4F71095 /* Pods-ByvWebView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ByvWebView_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ByvWebView_Tests/Pods-ByvWebView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E48B31331906D9AC6B490F3C /* Pods_ByvWebView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ByvWebView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -215,9 +215,11 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0820;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0820;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -494,6 +496,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -507,6 +510,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -526,6 +530,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -541,6 +546,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

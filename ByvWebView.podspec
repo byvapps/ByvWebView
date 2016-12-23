@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ByvWebView'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of ByvWebView.'
+  s.version          = '1.0.0'
+  s.summary          = 'UIViewController with UIWebView'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,25 +18,17 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+If the webview should load any link with the same host it create another ByvWebViewController with this request URL to generate an "UINavigationViewController history". If the link is external it load with UIApplication.shared.openURL(request.url!).
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/ByvWebView'
+  s.homepage         = 'https://github.com/byvapps/ByvWebView'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Adrian' => 'adrian@byvapps.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/ByvWebView.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => 'https://github.com/byvapps/ByvWebView.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/byvapps'
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'ByvWebView/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'ByvWebView' => ['ByvWebView/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
