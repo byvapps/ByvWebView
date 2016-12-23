@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'ByvWebView_Example' do
+  pod 'ByvWebView', :path => '../'
+
+  target 'ByvWebView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
