@@ -11,18 +11,24 @@ This view controller must be presented in an `UINavigationViewController`. If th
 
 By default the `UINavigationItme.title` is set with `document.title` at `webViewDidFinishLoad`. If you want to put one manually you can set `displayTitle`.
 
-## Usage
-#Import
-    import ByvWebView
+# Usage
+##Import
+```swift
+import ByvWebView
+```
+    
 
-#Use
-    let vc = ByvWebViewController()
-    vc.urlStr = "htttp://www.myurl.com"
-    vc.displayTitle = "About"
+##Use
+```swift
+let vc = ByvWebViewController()
+vc.urlStr = "htttp://www.myurl.com"
+vc.displayTitle = "About"
 
-    let nav = UINavigationController(rootViewController: vc)
+let nav = UINavigationController(rootViewController: vc)
 
-    self.present(nav, animated: true, completion: nil)
+self.present(nav, animated: true, completion: nil)
+```
+    
 
 ## Example
 
