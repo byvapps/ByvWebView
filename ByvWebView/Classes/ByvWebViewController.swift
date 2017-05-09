@@ -8,17 +8,19 @@
 
 import UIKit
 
-public class ByvWebViewController: UIViewController, UIWebViewDelegate {
+open class ByvWebViewController: UIViewController, UIWebViewDelegate {
     
     public var displayTitle:String? = nil
     public var urlStr:String? = nil
     
     var webView: UIWebView = UIWebView()
 
-    override public func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         
         webView.translatesAutoresizingMaskIntoConstraints = false
+        webView.backgroundColor = UIColor.clear
+        webView.isOpaque = false
         self.view.addSubview(webView)
         let views = ["webView": webView]
         var allConstraints = [NSLayoutConstraint]()
