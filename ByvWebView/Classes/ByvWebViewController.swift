@@ -12,6 +12,7 @@ open class ByvWebViewController: UIViewController, UIWebViewDelegate {
     
     public var displayTitle:String? = nil
     public var urlStr:String? = nil
+    public var webBackgroundColor:UIColor? = nil
     
     var webView: UIWebView = UIWebView()
 
@@ -19,7 +20,7 @@ open class ByvWebViewController: UIViewController, UIWebViewDelegate {
         super.viewDidLoad()
         
         webView.translatesAutoresizingMaskIntoConstraints = false
-        webView.backgroundColor = UIColor.clear
+        webView.backgroundColor = self.webBackgroundColor
         webView.isOpaque = false
         self.view.addSubview(webView)
         let views = ["webView": webView]
@@ -65,6 +66,7 @@ open class ByvWebViewController: UIViewController, UIWebViewDelegate {
         if request.url?.host == url?.host {
             let vc:ByvWebViewController = ByvWebViewController()
             vc.urlStr = request.url!.absoluteString;
+            vc.webBackgroundColor = self.webBackgroundColor
             self.navigationController?.pushViewController(vc, animated: true)
         } else {
             UIApplication.shared.openURL(request.url!)
