@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ByvWebView'
-  s.version          = '1.0.2'
+  s.version          = '1.0.3'
   s.summary          = 'UIViewController with UIWebView'
 
 # This description is used to generate tags and improve search results.
@@ -29,6 +29,7 @@ If the webview should load any link with the same host it create another ByvWebV
   s.social_media_url = 'https://twitter.com/byvapps'
 
   s.ios.deployment_target = '8.0'
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
 
   s.source_files = 'ByvWebView/Classes/**/*'
 end
